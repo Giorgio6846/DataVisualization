@@ -1,0 +1,35 @@
+table Minimo
+	lineageTag: 5edd9841-a785-4095-9861-e6dc5a86dc4f
+
+	column id
+		dataType: string
+		lineageTag: a7c62f4f-cca8-49fc-9ab5-b4be1610ad5c
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Minimo
+		dataType: int64
+		formatString: 0
+		lineageTag: 8da938f7-28f8-4069-b7b0-955deeb5e20b
+		summarizeBy: sum
+		sourceColumn: Minimo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Minimo = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("10.147.19.99:5432", "PowerBI"),
+				    public_ta1 = Source{[Schema="public",Item="ta1"]}[Data],
+				    #"Grouped Rows" = Table.Group(public_ta1, {"id"}, {{"Minimo", each List.Min([desempenho]), type nullable number}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Grouped Rows",{{"Minimo", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

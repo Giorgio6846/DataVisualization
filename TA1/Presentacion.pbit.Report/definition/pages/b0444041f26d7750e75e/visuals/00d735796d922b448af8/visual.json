@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "00d735796d922b448af8",
+  "position": {
+    "x": 13.312,
+    "y": 113.664,
+    "z": 0,
+    "height": 88.064,
+    "width": 691.2,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Hipótesis: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "20pt",
+                      "color": "#3a3a3a"
+                    }
+                  },
+                  {
+                    "value": "Operaciones y Marketing concentran el mayor porcentaje de colaboradores con calificación superior a 9",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "20pt",
+                      "color": "#3a3a3a"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

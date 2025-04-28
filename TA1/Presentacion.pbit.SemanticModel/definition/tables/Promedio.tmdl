@@ -1,0 +1,35 @@
+table Promedio
+	lineageTag: 65ada4ea-1a09-4474-87fa-946bfa36f079
+
+	column id
+		dataType: string
+		lineageTag: 880ff328-4e01-4e71-8b17-e825851463d8
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Promedio
+		dataType: int64
+		formatString: 0
+		lineageTag: 7eda1769-e08f-452e-ba2c-b1c152385d37
+		summarizeBy: sum
+		sourceColumn: Promedio
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Promedio = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("10.147.19.99:5432", "PowerBI"),
+				    public_ta1 = Source{[Schema="public",Item="ta1"]}[Data],
+				    #"Grouped Rows" = Table.Group(public_ta1, {"id"}, {{"Promedio", each List.Average([desempenho]), type nullable number}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Grouped Rows",{{"Promedio", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

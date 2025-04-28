@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "86590915d4da206e4acb",
+  "position": {
+    "x": 8.7537993920972657,
+    "y": 123.5258358662614,
+    "z": 0,
+    "height": 75.866261398176292,
+    "width": 596.23100303951367,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Hipótesis: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "20pt",
+                      "color": "#3a3a3a"
+                    }
+                  },
+                  {
+                    "value": "No existen colaboradores con evaluación de desempeño menor a 2",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "20pt",
+                      "color": "#3a3a3a"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

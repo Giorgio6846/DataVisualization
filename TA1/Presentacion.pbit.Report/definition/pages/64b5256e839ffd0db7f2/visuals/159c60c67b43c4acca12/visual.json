@@ -1,0 +1,62 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "159c60c67b43c4acca12",
+  "position": {
+    "x": 750.8661417322835,
+    "y": 269.10236220472439,
+    "z": 5000,
+    "height": 81.637795275590548,
+    "width": 463.62204724409446,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Cantidad de empleados con desempeño menor a 2 durante algún a",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "20pt",
+                      "color": "#3a3a3a"
+                    }
+                  },
+                  {
+                    "value": "ño",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "26.6667px",
+                      "color": "#3a3a3a"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

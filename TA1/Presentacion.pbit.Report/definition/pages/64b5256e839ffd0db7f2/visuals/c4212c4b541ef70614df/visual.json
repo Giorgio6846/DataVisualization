@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "c4212c4b541ef70614df",
+  "position": {
+    "x": 97.763779527559052,
+    "y": 272.12598425196853,
+    "z": 3000,
+    "height": 75.590551181102356,
+    "width": 463.62204724409446,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Promedio del desempe",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "20pt",
+                      "color": "#3a3a3a"
+                    }
+                  },
+                  {
+                    "value": "ño de los empleados durante los ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "26.6667px",
+                      "color": "#3a3a3a"
+                    }
+                  },
+                  {
+                    "value": "a",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "20pt",
+                      "color": "#3a3a3a"
+                    }
+                  },
+                  {
+                    "value": "ños",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "26.6667px",
+                      "color": "#3a3a3a"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
