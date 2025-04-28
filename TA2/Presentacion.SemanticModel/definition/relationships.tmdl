@@ -1,0 +1,5 @@
+relationship 66dd4ecd-07ee-441b-a4e5-6713cd005ca4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DisneyCast.date_added
+	toColumn: LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9.Date
+

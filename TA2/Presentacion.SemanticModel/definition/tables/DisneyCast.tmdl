@@ -1,0 +1,144 @@
+table DisneyCast
+	lineageTag: 95b6dc6d-6135-4508-b510-7b9c752dbd0c
+
+	column show_id
+		dataType: string
+		lineageTag: ab0e1732-5bd9-4060-9a6d-6c295901779b
+		summarizeBy: none
+		sourceColumn: show_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: fb3c388d-24b1-4d49-86c9-d23e6f15276a
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 398972d4-4354-4a8d-914c-ce8683459136
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column director
+		dataType: string
+		lineageTag: b68e8227-cfa0-4f13-8f3b-1663f878c9c2
+		summarizeBy: none
+		sourceColumn: director
+
+		annotation SummarizationSetBy = Automatic
+
+	column cast
+		dataType: string
+		lineageTag: 99529f80-4d6c-4c17-a3c6-3ba6c41039eb
+		summarizeBy: none
+		sourceColumn: cast
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 47b3c3c6-a6b7-4143-aec3-faa72d3eeb74
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_added
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6011447a-9b54-4b3c-b962-45dc86ea9248
+		summarizeBy: none
+		sourceColumn: date_added
+
+		variation Variation
+			isDefault
+			relationship: 66dd4ecd-07ee-441b-a4e5-6713cd005ca4
+			defaultHierarchy: LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column release_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 8632c4b8-968b-48c7-b0f4-6d4ac0e0af7a
+		summarizeBy: sum
+		sourceColumn: release_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column rating
+		dataType: string
+		lineageTag: e31ddd3b-6539-4de1-8bc1-c4541c2a5b2d
+		summarizeBy: none
+		sourceColumn: rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column duration
+		dataType: string
+		lineageTag: 34b75058-1fb2-4035-a850-e234ce85ebaa
+		summarizeBy: none
+		sourceColumn: duration
+
+		annotation SummarizationSetBy = Automatic
+
+	column listed_in
+		dataType: string
+		lineageTag: 5fc28fb1-eeb9-41a2-a5e4-98ae2b20ed6d
+		summarizeBy: none
+		sourceColumn: listed_in
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 82daa787-dfa3-4ae3-b548-2d130cac64f1
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column duration_time
+		dataType: int64
+		formatString: 0
+		lineageTag: 02609d9f-fef3-49b0-b5d6-679d5e7727bd
+		summarizeBy: sum
+		sourceColumn: duration_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column mayor_min
+		dataType: string
+		lineageTag: 1c45fa01-9895-47ff-814a-29c0571a369a
+		summarizeBy: none
+		sourceColumn: mayor_min
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DisneyCast = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("10.147.19.99:5432", "PowerBI"),
+				    public_ta2 = Source{[Schema="public",Item="ta2"]}[Data],
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(public_ta2, {{"cast", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "cast"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"cast", type text}}),
+				    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Changed Type", {{"director", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "director"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"director", type text}}),
+				    #"Split Column by Delimiter2" = Table.ExpandListColumn(Table.TransformColumns(#"Changed Type1", {{"listed_in", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "listed_in"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter2",{{"listed_in", type text}})
+				in
+				    #"Changed Type2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
