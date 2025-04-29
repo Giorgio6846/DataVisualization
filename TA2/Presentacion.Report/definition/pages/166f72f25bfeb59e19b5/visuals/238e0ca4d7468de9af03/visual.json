@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "238e0ca4d7468de9af03",
+  "position": {
+    "x": 667.78294573643416,
+    "y": 303.62790697674421,
+    "z": 0,
+    "height": 374.07751937984494,
+    "width": 577.48837209302326,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DisneyCast"
+                    }
+                  },
+                  "Property": "listed_in"
+                }
+              },
+              "queryRef": "DisneyCast.listed_in",
+              "nativeQueryRef": "listed_in1",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DisneyCast"
+                        }
+                      },
+                      "Property": "listed_in"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(DisneyCast.listed_in)",
+              "nativeQueryRef": "listed_in"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DisneyCast"
+                      }
+                    },
+                    "Property": "listed_in"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
