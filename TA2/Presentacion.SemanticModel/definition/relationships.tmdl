@@ -1,5 +1,21 @@
 relationship 66dd4ecd-07ee-441b-a4e5-6713cd005ca4
 	joinOnDateBehavior: datePartOnly
-	fromColumn: DisneyCast.date_added
+	fromColumn: DisneyMovies.date_added
 	toColumn: LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9.Date
+
+relationship 802cc2f7-e582-4330-f67d-99fc9905c5d8
+	fromColumn: Cast.show_id
+	toColumn: DisneyMovies.show_id
+
+relationship AutoDetected_6dc24215-3a80-423a-a020-75a88d5af4b0
+	fromColumn: Directors.show_id
+	toColumn: DisneyMovies.show_id
+
+relationship AutoDetected_21a9b8ff-1af2-49c0-8937-2120f0c40242
+	fromColumn: Countries.show_id
+	toColumn: DisneyMovies.show_id
+
+relationship AutoDetected_e2e59bf0-1d64-4038-8ab3-e2239c2c7de2
+	fromColumn: Categories.show_id
+	toColumn: DisneyMovies.show_id
 

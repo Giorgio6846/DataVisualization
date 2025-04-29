@@ -1,4 +1,4 @@
-table DisneyCast
+table DisneyMovies
 	lineageTag: 95b6dc6d-6135-4508-b510-7b9c752dbd0c
 
 	column show_id
@@ -22,30 +22,6 @@ table DisneyCast
 		lineageTag: 398972d4-4354-4a8d-914c-ce8683459136
 		summarizeBy: none
 		sourceColumn: title
-
-		annotation SummarizationSetBy = Automatic
-
-	column director
-		dataType: string
-		lineageTag: b68e8227-cfa0-4f13-8f3b-1663f878c9c2
-		summarizeBy: none
-		sourceColumn: director
-
-		annotation SummarizationSetBy = Automatic
-
-	column cast
-		dataType: string
-		lineageTag: 99529f80-4d6c-4c17-a3c6-3ba6c41039eb
-		summarizeBy: none
-		sourceColumn: cast
-
-		annotation SummarizationSetBy = Automatic
-
-	column country
-		dataType: string
-		lineageTag: 47b3c3c6-a6b7-4143-aec3-faa72d3eeb74
-		summarizeBy: none
-		sourceColumn: country
 
 		annotation SummarizationSetBy = Automatic
 
@@ -90,14 +66,6 @@ table DisneyCast
 
 		annotation SummarizationSetBy = Automatic
 
-	column listed_in
-		dataType: string
-		lineageTag: 5fc28fb1-eeb9-41a2-a5e4-98ae2b20ed6d
-		summarizeBy: none
-		sourceColumn: listed_in
-
-		annotation SummarizationSetBy = Automatic
-
 	column description
 		dataType: string
 		lineageTag: 82daa787-dfa3-4ae3-b548-2d130cac64f1
@@ -123,7 +91,7 @@ table DisneyCast
 
 		annotation SummarizationSetBy = Automatic
 
-	partition DisneyCast = m
+	partition DisneyMovies = m
 		mode: import
 		source =
 				let
@@ -131,12 +99,19 @@ table DisneyCast
 				    public_ta2 = Source{[Schema="public",Item="ta2"]}[Data],
 				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(public_ta2, {{"cast", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "cast"),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"cast", type text}}),
-				    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Changed Type", {{"director", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "director"),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"cast"}),
+				    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns", {{"director", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "director"),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"director", type text}}),
-				    #"Split Column by Delimiter2" = Table.ExpandListColumn(Table.TransformColumns(#"Changed Type1", {{"listed_in", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "listed_in"),
-				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter2",{{"listed_in", type text}})
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type1",{"director"}),
+				    #"Split Column by Delimiter2" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns1", {{"country", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "country"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter2",{{"country", type text}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Changed Type2",{"country"}),
+				    #"Split Column by Delimiter3" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns2", {{"listed_in", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "listed_in"),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Split Column by Delimiter3",{{"listed_in", type text}}),
+				    #"Removed Columns3" = Table.RemoveColumns(#"Changed Type3",{"listed_in"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns3", {"show_id"})
 				in
-				    #"Changed Type2"
+				    #"Removed Duplicates"
 
 	annotation PBI_NavigationStepName = Navigation
 

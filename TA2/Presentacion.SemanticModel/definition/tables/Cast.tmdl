@@ -1,0 +1,41 @@
+table Cast
+	lineageTag: 4e2ef504-c4d8-4196-b8ab-9ffc64c752d2
+
+	column show_id
+		dataType: string
+		lineageTag: fa87a815-b76b-48f5-b86c-e7cff1e5f29a
+		summarizeBy: none
+		sourceColumn: show_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cast
+		dataType: string
+		lineageTag: ba7304e1-7d1b-4224-a46d-9f84e4b6b7ab
+		summarizeBy: none
+		sourceColumn: cast
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Cast = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("10.147.19.99:5432", "PowerBI"),
+				    public_ta2 = Source{[Schema="public",Item="ta2"]}[Data],
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(public_ta2, {{"cast", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "cast"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"cast", type text}}),
+				    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Changed Type", {{"director", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "director"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"director", type text}}),
+				    #"Split Column by Delimiter2" = Table.ExpandListColumn(Table.TransformColumns(#"Changed Type1", {{"listed_in", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "listed_in"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter2",{{"listed_in", type text}}),
+				    #"Split Column by Delimiter3" = Table.ExpandListColumn(Table.TransformColumns(#"Changed Type2", {{"country", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "country"),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Split Column by Delimiter3",{{"country", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type3",{"type", "title", "director", "country", "date_added", "release_year", "rating", "duration", "listed_in", "description", "duration_time", "mayor_min"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

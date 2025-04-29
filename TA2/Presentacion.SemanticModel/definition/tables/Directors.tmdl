@@ -1,0 +1,39 @@
+table Directors
+	lineageTag: 721e960f-a66f-4a9a-a43e-04ad95dbc788
+
+	column show_id
+		dataType: string
+		lineageTag: 20bdf084-d5ee-4d70-8e81-806aa581ff70
+		summarizeBy: none
+		sourceColumn: show_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column director
+		dataType: string
+		lineageTag: cd6514e1-5178-4839-ab2b-1f9c2740a402
+		summarizeBy: none
+		sourceColumn: director
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Directors = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("10.147.19.99:5432", "PowerBI"),
+				    public_ta2 = Source{[Schema="public",Item="ta2"]}[Data],
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(public_ta2, {{"cast", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "cast"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"cast", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"cast"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns", {"show_id"}),
+				    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Duplicates", {{"director", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "director"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"director", type text}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type1",{"type", "title", "country", "date_added", "release_year", "rating", "duration", "listed_in", "description", "duration_time", "mayor_min"})
+				in
+				    #"Removed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

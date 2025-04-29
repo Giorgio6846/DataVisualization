@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["DisneyCast"]
+annotation PBI_QueryOrder = ["DisneyMovies","Cast","Directors","Countries","Categories"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -14,9 +14,13 @@ annotation PBIDesktopVersion = 2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table DisneyCast
+ref table DisneyMovies
 ref table DateTableTemplate_b5235d5d-a40a-4384-9e1e-fc9143d1c2fd
 ref table LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9
+ref table Cast
+ref table Directors
+ref table Countries
+ref table Categories
 
 ref cultureInfo en-US
 
