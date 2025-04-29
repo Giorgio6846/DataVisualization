@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 24
+        "y": 47
       },
       "nodes": [
         {
           "location": {
             "x": 244,
-            "y": 309.375
+            "y": 336.0625
           },
           "nodeIndex": "DisneyMovies",
           "nodeLineageTag": "95b6dc6d-6135-4508-b510-7b9c752dbd0c",
@@ -19,25 +19,12 @@
             "height": 455,
             "width": 234
           },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 742,
-            "y": 476.875
-          },
-          "nodeIndex": "Cast",
-          "nodeLineageTag": "4e2ef504-c4d8-4196-b8ab-9ffc64c752d2",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 3
+          "zIndex": 4
         },
         {
           "location": {
             "x": 746,
-            "y": 53.375
+            "y": 80.0625
           },
           "nodeIndex": "Directors",
           "nodeLineageTag": "721e960f-a66f-4a9a-a43e-04ad95dbc788",
@@ -50,7 +37,7 @@
         {
           "location": {
             "x": 746,
-            "y": 198.625
+            "y": 225.3125
           },
           "nodeIndex": "Categories",
           "nodeLineageTag": "d062a1ef-b126-4e2f-ae4e-33d6fa93d40c",
@@ -58,12 +45,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
             "x": 739,
-            "y": 336.625
+            "y": 363.3125
           },
           "nodeIndex": "Countries",
           "nodeLineageTag": "50046632-610c-449b-94ab-c23451266009",
@@ -71,7 +58,20 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 738,
+            "y": 591.1875
+          },
+          "nodeIndex": "Casts",
+          "nodeLineageTag": "42d96707-5fc2-4f2b-9b7e-7e21d8bc1501",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
         }
       ],
       "name": "All tables",

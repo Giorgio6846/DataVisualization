@@ -1,17 +1,20 @@
 table Countries
-	lineageTag: 50046632-610c-449b-94ab-c23451266009
+	lineageTag: 728cef5d-b7ce-4e68-9524-86b99551f9e8
 
 	column show_id
 		dataType: string
-		lineageTag: 04a95b26-5779-4209-b4e3-15afd0d0b190
+		isHidden
+		lineageTag: ddf4947f-b6a2-40d0-94cc-03c760dd99cb
 		summarizeBy: none
 		sourceColumn: show_id
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column country
 		dataType: string
-		lineageTag: 789781ce-e5d9-4b38-8ba3-0901babca1f8
+		lineageTag: 6e783e83-8c7d-4d4d-a8c9-197e19c2673c
 		summarizeBy: none
 		sourceColumn: country
 
@@ -19,23 +22,16 @@ table Countries
 
 	partition Countries = m
 		mode: import
+		queryGroup: Relations
 		source =
 				let
 				    Source = PostgreSQL.Database("10.147.19.99:5432", "PowerBI"),
 				    public_ta2 = Source{[Schema="public",Item="ta2"]}[Data],
-				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(public_ta2, {{"cast", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "cast"),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"cast", type text}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"cast"}),
-				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns", {"show_id"}),
-				    #"Split Column by Delimiter1" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Duplicates", {{"director", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "director"),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{"director", type text}}),
-				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type1",{"director"}),
-				    #"Removed Duplicates1" = Table.Distinct(#"Removed Columns1", {"country"}),
-				    #"Split Column by Delimiter2" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Duplicates1", {{"country", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "country"),
-				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter2",{{"country", type text}}),
-				    #"Removed Columns2" = Table.RemoveColumns(#"Changed Type2",{"type", "title", "date_added", "release_year", "rating", "duration", "listed_in", "description", "duration_time", "mayor_min"})
+				    #"Removed Columns" = Table.RemoveColumns(public_ta2,{"cast", "type", "title", "director", "date_added", "release_year", "rating", "duration", "listed_in", "description", "duration_time", "mayor_min"}),
+				    #"Split Column by Delimiter" = Table.ExpandListColumn(Table.TransformColumns(#"Removed Columns", {{"country", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "country"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"country", type text}})
 				in
-				    #"Removed Columns2"
+				    #"Changed Type"
 
 	annotation PBI_NavigationStepName = Navigation
 

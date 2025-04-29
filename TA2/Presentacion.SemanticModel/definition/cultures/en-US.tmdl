@@ -2,8 +2,2904 @@ cultureInfo en-US
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "disney_movie": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "disney movie": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DisneyMovies": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "movie": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "disney show": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "disney flick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "disney picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "disney film": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "flick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "film": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.show_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "show_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "show id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "show_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "show identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "style": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Tipo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.date_added": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "date_added"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date added": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date_added": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "moment added": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period added": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "disney_movie.date_added.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "VariationSource": "date_added",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date hierarchy added": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "disney_movie.date_added.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "VariationSource": "date_added",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year added": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date added year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date added yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "yr added": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment added year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period added year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "disney_movie.date_added.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "VariationSource": "date_added",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter added": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date added quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date added qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "qtr added": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "moment added quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period added quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "disney_movie.date_added.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "VariationSource": "date_added",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month added": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date added month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date added mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "mth added": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment added month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period added month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "disney_movie.date_added.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "VariationSource": "date_added",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day added": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date added day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment added day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "period added day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "disney_movie.release_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "release_year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "release year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "release_year": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "release yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "disney_movie.rating": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "rating"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rating": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ranking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sailor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "seaman": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "hand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.duration": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "duration"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "duration": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "length": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spell": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "description": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "overview": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.duration_time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "duration_time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "duration time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "duration_time": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "duration duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "duration interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "duration moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "duration period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "duration timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "disney_movie.mayor_min": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "mayor_min"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mayor min": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mayor_min": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "mayor minimum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "cast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Casts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cast": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "troupe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "cast.show_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Casts",
+			          "ConceptualProperty": "show_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "show id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "show_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "show identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "cast.cast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Casts",
+			          "ConceptualProperty": "cast"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cast": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cast name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "troupe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Countries"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "country.show_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Countries",
+			          "ConceptualProperty": "show_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "show id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "show_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "show identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "country.country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Countries",
+			          "ConceptualProperty": "country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Categories"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "category.show_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Categories",
+			          "ConceptualProperty": "show_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "show id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "show_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "show identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "category.category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Categories",
+			          "ConceptualProperty": "Categories"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "director": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Directors"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "director": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "manager": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "administrator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "leader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "executive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "boss": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "principal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "instructor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "counselor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "counsellor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "director.show_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Directors",
+			          "ConceptualProperty": "show_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "show id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "show_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "show identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "show credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "director.director": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Directors",
+			          "ConceptualProperty": "director"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "director": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "manager": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "administrator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "leader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "executive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "boss": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "principal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "instructor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "counselor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "counsellor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "cast_has_cast": {
+			      "Binding": {
+			        "ConceptualEntity": "Casts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cast": {
+			          "Target": {
+			            "Entity": "cast"
+			          }
+			        },
+			        "cast.cast": {
+			          "Target": {
+			            "Entity": "cast.cast"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cast"
+			            },
+			            "Object": {
+			              "Role": "cast.cast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "casts_have_casts"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "cast"
+			            },
+			            "Name": {
+			              "Role": "cast.cast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "casts_are_names_IDs_of_casts"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_mayor_min": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.mayor_min": {
+			          "Target": {
+			            "Entity": "disney_movie.mayor_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.mayor_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_mayor_mins"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_duration_time": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.duration_time": {
+			          "Target": {
+			            "Entity": "disney_movie.duration_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.duration_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_duration_times"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_description": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.description": {
+			          "Target": {
+			            "Entity": "disney_movie.description"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_descriptions"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_duration": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.duration": {
+			          "Target": {
+			            "Entity": "disney_movie.duration"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.duration"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_durations"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_rating": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.rating": {
+			          "Target": {
+			            "Entity": "disney_movie.rating"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.rating"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_rating"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_release_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.release_year": {
+			          "Target": {
+			            "Entity": "disney_movie.release_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.release_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_release_years"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_date_added": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.date_added": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_date_added"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_title": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.title": {
+			          "Target": {
+			            "Entity": "disney_movie.title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_titles"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_type": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.type": {
+			          "Target": {
+			            "Entity": "disney_movie.type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_types"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_show_id": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.show_id": {
+			          "Target": {
+			            "Entity": "disney_movie.show_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.show_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_show_ids"
+			        }
+			      ]
+			    },
+			    "country_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country": {
+			          "Target": {
+			            "Entity": "country"
+			          }
+			        },
+			        "country.country": {
+			          "Target": {
+			            "Entity": "country.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "country.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "country"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "country.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "countries_are_in_countries"
+			        }
+			      ]
+			    },
+			    "disney_movie_is_released_in_release_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.release_year": {
+			          "Target": {
+			            "Entity": "disney_movie.release_year"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "disney_movie.release_year"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "release": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "disney_movies_are_released_on_release_years"
+			        }
+			      ]
+			    },
+			    "disney_movie_is_added_on_date_added": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.date_added": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "disney_movie.date_added"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "add": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "disney_movies_are_added_on_date_added"
+			        }
+			      ]
+			    },
+			    "director_direct": {
+			      "Binding": {
+			        "ConceptualEntity": "Directors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "director": {
+			          "Target": {
+			            "Entity": "director"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "director"
+			            },
+			            "Verbs": [
+			              {
+			                "direct": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "directors_direct"
+			        }
+			      ]
+			    },
+			    "director_director_direct_director": {
+			      "Binding": {
+			        "ConceptualEntity": "Directors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "director.director": {
+			          "Target": {
+			            "Entity": "director.director"
+			          }
+			        },
+			        "director": {
+			          "Target": {
+			            "Entity": "director"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "director.director"
+			            },
+			            "Verbs": [
+			              {
+			                "direct": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "directors_direct_directors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "director.director"
+			            },
+			            "Object": {
+			              "Role": "director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "directors_have_directors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "director"
+			            },
+			            "Object": {
+			              "Role": "director.director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "directors_have_directors1"
+			        }
+			      ]
+			    },
+			    "country_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country": {
+			          "Target": {
+			            "Entity": "country"
+			          }
+			        },
+			        "country.country": {
+			          "Target": {
+			            "Entity": "country.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "country"
+			            },
+			            "Object": {
+			              "Role": "country.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "countries_have_countries"
+			        }
+			      ]
+			    },
+			    "category_has_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Categories"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "category": {
+			          "Target": {
+			            "Entity": "category"
+			          }
+			        },
+			        "category.category": {
+			          "Target": {
+			            "Entity": "category.category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "category"
+			            },
+			            "Object": {
+			              "Role": "category.category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "categories_have_categories"
+			        }
+			      ]
+			    },
+			    "cast_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Casts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cast": {
+			          "Target": {
+			            "Entity": "cast"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cast"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "casts_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "cast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_casts"
+			        }
+			      ]
+			    },
+			    "country_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country": {
+			          "Target": {
+			            "Entity": "country"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "country"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "countries_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_countries"
+			        }
+			      ]
+			    },
+			    "category_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Categories"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "category": {
+			          "Target": {
+			            "Entity": "category"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "category"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "categories_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_categories"
+			        }
+			      ]
+			    },
+			    "director_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Directors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "director": {
+			          "Target": {
+			            "Entity": "director"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "director"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "directors_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_directors"
+			        }
+			      ]
+			    },
+			    "disney_movie_date_added_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added"
+			          }
+			        },
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_added_have_date_hierarchy_added"
+			        }
+			      ]
+			    },
+			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        },
+			        "disney_movie.date_added.year": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_added_have_year_added"
+			        }
+			      ]
+			    },
+			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        },
+			        "disney_movie.date_added.quarter": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_added_have_quarter_added"
+			        }
+			      ]
+			    },
+			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_month": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        },
+			        "disney_movie.date_added.month": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_added_have_month_added"
+			        }
+			      ]
+			    },
+			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        },
+			        "disney_movie.date_added.day": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_added_have_day_added"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.0.0"
+			    }
+			  }
 			}
 		contentType: json
 
