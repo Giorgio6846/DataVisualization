@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "4509279d407eb42c6b86",
+  "name": "fa24d620a8a1155616cc",
   "position": {
-    "x": 733.37386018237089,
-    "y": 49.6048632218845,
-    "z": 3,
-    "height": 298.60182370820672,
-    "width": 498.96656534954411,
-    "tabOrder": 3
+    "x": 489.24012158054711,
+    "y": 230.51671732522797,
+    "z": 1,
+    "height": 458.11550151975683,
+    "width": 790.75987841945289,
+    "tabOrder": 1
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -51,7 +51,7 @@
                 }
               },
               "queryRef": "CountNonNull(DisneyMovies.show_id)",
-              "nativeQueryRef": "Count of show_id"
+              "nativeQueryRef": "Count of show_id1"
             }
           ]
         }
@@ -84,38 +84,10 @@
       "categoryAxis": [
         {
           "properties": {
-            "titleText": {
+            "axisType": {
               "expr": {
                 "Literal": {
-                  "Value": "'Duracion'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Cantidad de duracion'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Cantidad de duracion de peliculas por año'"
+                  "Value": "'Categorical'"
                 }
               }
             }
@@ -128,7 +100,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6d1eaa2c9d112703e0e0",
+        "name": "52f23373196a85b6c028",
         "field": {
           "Column": {
             "Expression": {
@@ -169,7 +141,61 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Movie'"
+                          "Value": "'TV Show'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "b3fb8deca9b88381be76",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DisneyMovies"
+              }
+            },
+            "Property": "duration"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DisneyMovies",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "duration"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'1 Season'"
                         }
                       }
                     ]
