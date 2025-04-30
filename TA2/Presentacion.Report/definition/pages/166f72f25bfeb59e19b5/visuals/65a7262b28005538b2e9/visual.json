@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "65a7262b28005538b2e9",
   "position": {
-    "x": 764.88778054862837,
-    "y": 473.11720698254362,
+    "x": 691.48936170212767,
+    "y": 473.40425531914894,
     "z": 6000,
-    "height": 246.88279301745635,
-    "width": 475.81047381546131,
+    "height": 246.80851063829789,
+    "width": 548.936170212766,
     "tabOrder": 6000
   },
   "visual": {
@@ -274,7 +274,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Rating de produccion'"
+                  "Value": "'Rating de producciones'"
                 }
               }
             },

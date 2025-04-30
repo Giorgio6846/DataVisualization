@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "ae5341ff230801105566",
+  "name": "fd5795c5c600187b678e",
   "position": {
-    "x": 984.278879015721,
-    "y": 90.116199589883792,
-    "z": 3000,
-    "height": 94.490772385509217,
-    "width": 255.47505126452492,
-    "tabOrder": 3000
+    "x": 346.89709347996859,
+    "y": 196.07227022780833,
+    "z": 2003,
+    "height": 94.516889238020426,
+    "width": 293.605655930872,
+    "tabOrder": 2003
   },
   "visual": {
     "visualType": "card",
@@ -25,19 +25,39 @@
                           "Entity": "DisneyMovies"
                         }
                       },
-                      "Property": "rating"
+                      "Property": "show_id"
                     }
                   },
-                  "Function": 3
+                  "Function": 5
                 }
               },
-              "queryRef": "Min(DisneyMovies.rating)",
-              "nativeQueryRef": "rating"
+              "queryRef": "Min(DisneyMovies.show_id)",
+              "nativeQueryRef": "Count of show_id"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DisneyMovies"
+                      }
+                    },
+                    "Property": "show_id"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -120,7 +140,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Rating comun'"
+                  "Value": "'Cantidad de producciones'"
                 }
               }
             },
@@ -133,6 +153,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -209,6 +236,51 @@
             }
           ]
         },
+        "howCreated": "User"
+      },
+      {
+        "name": "e8da4840aa210c520b9e",
+        "field": {
+          "Arithmetic": {
+            "Left": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DisneyMovies"
+                      }
+                    },
+                    "Property": "duration_time"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "Right": {
+              "ScopedEval": {
+                "Expression": {
+                  "Aggregation": {
+                    "Expression": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DisneyMovies"
+                          }
+                        },
+                        "Property": "duration_time"
+                      }
+                    },
+                    "Function": 1
+                  }
+                },
+                "Scope": []
+              }
+            },
+            "Operator": 3
+          }
+        },
+        "type": "Advanced",
         "howCreated": "User"
       }
     ]

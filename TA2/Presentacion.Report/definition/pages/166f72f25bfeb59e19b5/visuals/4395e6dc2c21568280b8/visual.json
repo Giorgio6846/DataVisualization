@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "4395e6dc2c21568280b8",
   "position": {
-    "x": 764.88778054862837,
-    "y": 223.54114713216956,
+    "x": 691.18250170881743,
+    "y": 202.98017771701981,
     "z": 5000,
-    "height": 246.88279301745635,
-    "width": 475.81047381546131,
+    "height": 250.22556390977442,
+    "width": 549.4463431305536,
     "tabOrder": 5000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "DisneyMovies.release_year",
-              "nativeQueryRef": "release_year",
-              "active": true
+              "nativeQueryRef": "Año",
+              "active": true,
+              "displayName": "Año"
             }
           ]
         },
@@ -70,7 +71,8 @@
                 }
               },
               "queryRef": "CountNonNull(DisneyMovies.type)",
-              "nativeQueryRef": "Count of type"
+              "nativeQueryRef": "Cantidad",
+              "displayName": "Cantidad"
             }
           ]
         }
@@ -240,6 +242,99 @@
                   "Value": "2019D"
                 }
               }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "trend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Trend line 1'"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
             }
           }
         }
@@ -305,7 +400,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tipo de produccion'"
+                  "Value": "'Cantidad de producciones durante los años'"
                 }
               }
             },
@@ -326,5 +421,54 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cce77fd643ba599eed86",
+        "field": {
+          "Arithmetic": {
+            "Left": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DisneyMovies"
+                      }
+                    },
+                    "Property": "type"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "Right": {
+              "ScopedEval": {
+                "Expression": {
+                  "Aggregation": {
+                    "Expression": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DisneyMovies"
+                          }
+                        },
+                        "Property": "type"
+                      }
+                    },
+                    "Function": 5
+                  }
+                },
+                "Scope": []
+              }
+            },
+            "Operator": 3
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ]
   }
 }

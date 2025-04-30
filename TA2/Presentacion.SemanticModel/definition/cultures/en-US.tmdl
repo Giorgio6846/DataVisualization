@@ -749,6 +749,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.75
 			          }
+			        },
+			        {
+			          "Año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -855,6 +865,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Ratings": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1573,6 +1593,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.714
 			          }
+			        },
+			        {
+			          "Categorias": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1873,6 +1903,45 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "disney_movie.duration_time_bins": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DisneyMovies",
+			          "ConceptualProperty": "duration_time (bins)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "duration_time (bins)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "duration_time (bin)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "duration_time": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Tiempo de duracion en minutos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -2156,6 +2225,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "disney_movies_have_casts"
+			        }
+			      ]
+			    },
+			    "disney_movie_has_duration_time_bins": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        },
+			        "disney_movie.duration_time_bins": {
+			          "Target": {
+			            "Entity": "disney_movie.duration_time_bins"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.duration_time_bins"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_duration_time_bins"
 			        }
 			      ]
 			    },
