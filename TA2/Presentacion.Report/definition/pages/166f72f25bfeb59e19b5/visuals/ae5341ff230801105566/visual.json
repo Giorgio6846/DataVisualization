@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "c2ad39302e06e9403897",
+  "name": "ae5341ff230801105566",
   "position": {
-    "x": 43.092269326683294,
+    "x": 984.83790523690766,
     "y": 89.775561097256855,
-    "z": 1000,
+    "z": 3000,
     "height": 95.16209476309227,
     "width": 255.86034912718205,
-    "tabOrder": 1000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "card",
@@ -25,39 +25,19 @@
                           "Entity": "DisneyMovies"
                         }
                       },
-                      "Property": "show_id"
+                      "Property": "rating"
                     }
                   },
-                  "Function": 5
+                  "Function": 3
                 }
               },
-              "queryRef": "Min(DisneyMovies.show_id)",
-              "nativeQueryRef": "Count of show_id"
+              "queryRef": "Min(DisneyMovies.rating)",
+              "nativeQueryRef": "rating"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "DisneyMovies"
-                      }
-                    },
-                    "Property": "show_id"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -101,6 +81,13 @@
                   }
                 }
               }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
             }
           }
         }
@@ -133,7 +120,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Producciones Totales'"
+                  "Value": "'Rating comun'"
                 }
               }
             },
@@ -167,5 +154,63 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ae5f0ac256a0d2a24c3a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DisneyMovies"
+              }
+            },
+            "Property": "type"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DisneyMovies",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "type"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Movie'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

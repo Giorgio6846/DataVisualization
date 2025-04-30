@@ -269,6 +269,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.714
 			          }
+			        },
+			        {
+			          "Tipo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1866,6 +1876,421 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
+			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        },
+			        "disney_movie.date_added.quarter": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_added_have_quarter_added"
+			        }
+			      ]
+			    },
+			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_year": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        },
+			        "disney_movie.date_added.year": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_added_have_year_added"
+			        }
+			      ]
+			    },
+			    "disney_movie_date_added_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "DisneyMovies"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "disney_movie.date_added": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added"
+			          }
+			        },
+			        "disney_movie.date_added.date_hierarchy": {
+			          "Target": {
+			            "Entity": "disney_movie.date_added.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie.date_added"
+			            },
+			            "Object": {
+			              "Role": "disney_movie.date_added.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_added_have_date_hierarchy_added"
+			        }
+			      ]
+			    },
+			    "director_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Directors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "director": {
+			          "Target": {
+			            "Entity": "director"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "director"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "directors_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_directors"
+			        }
+			      ]
+			    },
+			    "category_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Categories"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "category": {
+			          "Target": {
+			            "Entity": "category"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "category"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "categories_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_categories"
+			        }
+			      ]
+			    },
+			    "country_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country": {
+			          "Target": {
+			            "Entity": "country"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "country"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "countries_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_countries"
+			        }
+			      ]
+			    },
+			    "cast_has_disney_movie": {
+			      "Binding": {
+			        "ConceptualEntity": "Casts"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cast": {
+			          "Target": {
+			            "Entity": "cast"
+			          }
+			        },
+			        "disney_movie": {
+			          "Target": {
+			            "Entity": "disney_movie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cast"
+			            },
+			            "Object": {
+			              "Role": "disney_movie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "casts_have_disney_movies"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "disney_movie"
+			            },
+			            "Object": {
+			              "Role": "cast"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "disney_movies_have_casts"
+			        }
+			      ]
+			    },
+			    "director_has_director": {
+			      "Binding": {
+			        "ConceptualEntity": "Directors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "director": {
+			          "Target": {
+			            "Entity": "director"
+			          }
+			        },
+			        "director.director": {
+			          "Target": {
+			            "Entity": "director.director"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "director"
+			            },
+			            "Object": {
+			              "Role": "director.director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "directors_have_directors"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "director.director"
+			            },
+			            "Verbs": [
+			              {
+			                "direct": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "directors_direct_directors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "director.director"
+			            },
+			            "Object": {
+			              "Role": "director"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "directors_have_directors1"
+			        }
+			      ]
+			    },
+			    "category_has_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Categories"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "category": {
+			          "Target": {
+			            "Entity": "category"
+			          }
+			        },
+			        "category.category": {
+			          "Target": {
+			            "Entity": "category.category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "category"
+			            },
+			            "Object": {
+			              "Role": "category.category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "categories_have_categories"
+			        }
+			      ]
+			    },
+			    "country_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Countries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country": {
+			          "Target": {
+			            "Entity": "country"
+			          }
+			        },
+			        "country.country": {
+			          "Target": {
+			            "Entity": "country.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "country"
+			            },
+			            "Object": {
+			              "Role": "country.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "countries_have_countries"
+			        }
+			      ]
+			    },
 			    "cast_has_cast": {
 			      "Binding": {
 			        "ConceptualEntity": "Casts"
@@ -2400,421 +2825,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.75,
 			          "ID": "directors_direct"
-			        }
-			      ]
-			    },
-			    "director_director_direct_director": {
-			      "Binding": {
-			        "ConceptualEntity": "Directors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "director.director": {
-			          "Target": {
-			            "Entity": "director.director"
-			          }
-			        },
-			        "director": {
-			          "Target": {
-			            "Entity": "director"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Verb": {
-			            "Subject": {
-			              "Role": "director.director"
-			            },
-			            "Verbs": [
-			              {
-			                "direct": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "director"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.75,
-			          "ID": "directors_direct_directors"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "director.director"
-			            },
-			            "Object": {
-			              "Role": "director"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "directors_have_directors"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "director"
-			            },
-			            "Object": {
-			              "Role": "director.director"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "directors_have_directors1"
-			        }
-			      ]
-			    },
-			    "country_has_country": {
-			      "Binding": {
-			        "ConceptualEntity": "Countries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "country": {
-			          "Target": {
-			            "Entity": "country"
-			          }
-			        },
-			        "country.country": {
-			          "Target": {
-			            "Entity": "country.country"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "country"
-			            },
-			            "Object": {
-			              "Role": "country.country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "countries_have_countries"
-			        }
-			      ]
-			    },
-			    "category_has_category": {
-			      "Binding": {
-			        "ConceptualEntity": "Categories"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "category": {
-			          "Target": {
-			            "Entity": "category"
-			          }
-			        },
-			        "category.category": {
-			          "Target": {
-			            "Entity": "category.category"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "category"
-			            },
-			            "Object": {
-			              "Role": "category.category"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "categories_have_categories"
-			        }
-			      ]
-			    },
-			    "cast_has_disney_movie": {
-			      "Binding": {
-			        "ConceptualEntity": "Casts"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cast": {
-			          "Target": {
-			            "Entity": "cast"
-			          }
-			        },
-			        "disney_movie": {
-			          "Target": {
-			            "Entity": "disney_movie"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cast"
-			            },
-			            "Object": {
-			              "Role": "disney_movie"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "casts_have_disney_movies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "disney_movie"
-			            },
-			            "Object": {
-			              "Role": "cast"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "disney_movies_have_casts"
-			        }
-			      ]
-			    },
-			    "country_has_disney_movie": {
-			      "Binding": {
-			        "ConceptualEntity": "Countries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "country": {
-			          "Target": {
-			            "Entity": "country"
-			          }
-			        },
-			        "disney_movie": {
-			          "Target": {
-			            "Entity": "disney_movie"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "country"
-			            },
-			            "Object": {
-			              "Role": "disney_movie"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "countries_have_disney_movies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "disney_movie"
-			            },
-			            "Object": {
-			              "Role": "country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "disney_movies_have_countries"
-			        }
-			      ]
-			    },
-			    "category_has_disney_movie": {
-			      "Binding": {
-			        "ConceptualEntity": "Categories"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "category": {
-			          "Target": {
-			            "Entity": "category"
-			          }
-			        },
-			        "disney_movie": {
-			          "Target": {
-			            "Entity": "disney_movie"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "category"
-			            },
-			            "Object": {
-			              "Role": "disney_movie"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "categories_have_disney_movies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "disney_movie"
-			            },
-			            "Object": {
-			              "Role": "category"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "disney_movies_have_categories"
-			        }
-			      ]
-			    },
-			    "director_has_disney_movie": {
-			      "Binding": {
-			        "ConceptualEntity": "Directors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "director": {
-			          "Target": {
-			            "Entity": "director"
-			          }
-			        },
-			        "disney_movie": {
-			          "Target": {
-			            "Entity": "disney_movie"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "director"
-			            },
-			            "Object": {
-			              "Role": "disney_movie"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "directors_have_disney_movies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "disney_movie"
-			            },
-			            "Object": {
-			              "Role": "director"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "disney_movies_have_directors"
-			        }
-			      ]
-			    },
-			    "disney_movie_date_added_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "DisneyMovies"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "disney_movie.date_added": {
-			          "Target": {
-			            "Entity": "disney_movie.date_added"
-			          }
-			        },
-			        "disney_movie.date_added.date_hierarchy": {
-			          "Target": {
-			            "Entity": "disney_movie.date_added.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "disney_movie.date_added"
-			            },
-			            "Object": {
-			              "Role": "disney_movie.date_added.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_added_have_date_hierarchy_added"
-			        }
-			      ]
-			    },
-			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_year": {
-			      "Binding": {
-			        "ConceptualEntity": "DisneyMovies"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "disney_movie.date_added.date_hierarchy": {
-			          "Target": {
-			            "Entity": "disney_movie.date_added.date_hierarchy"
-			          }
-			        },
-			        "disney_movie.date_added.year": {
-			          "Target": {
-			            "Entity": "disney_movie.date_added.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "disney_movie.date_added.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "disney_movie.date_added.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchy_added_have_year_added"
-			        }
-			      ]
-			    },
-			    "disney_movie_date_added_date_hierarchy_has_disney_movie_date_added_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "DisneyMovies"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "disney_movie.date_added.date_hierarchy": {
-			          "Target": {
-			            "Entity": "disney_movie.date_added.date_hierarchy"
-			          }
-			        },
-			        "disney_movie.date_added.quarter": {
-			          "Target": {
-			            "Entity": "disney_movie.date_added.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "disney_movie.date_added.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "disney_movie.date_added.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchy_added_have_quarter_added"
 			        }
 			      ]
 			    },

@@ -83,11 +83,50 @@ table DisneyMovies
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"DisneyMovies","TableItemName":"duration_time (bins)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
 	column mayor_min
 		dataType: string
 		lineageTag: 1c45fa01-9895-47ff-814a-29c0571a369a
 		summarizeBy: none
 		sourceColumn: mayor_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'duration_time (bins)' =
+			IF(
+				ISBLANK('DisneyMovies'[duration_time]),
+				BLANK(),
+				INT('DisneyMovies'[duration_time] / 30) * 30
+			)
+		formatString: 0
+		lineageTag: 2356c6b8-115d-4371-ab58-26cc56b82dff
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "DisneyMovies"
+				          }
+				        },
+				        "Property": "duration_time"
+				      }
+				    }
+				  ],
+				  "binningMetadata": {
+				    "binSize": {
+				      "value": 30.0,
+				      "unit": 0
+				    }
+				  }
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"d","Entity":"DisneyMovies"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"duration_time"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"duration_time"}},"Size":30.0}}}}
 
 		annotation SummarizationSetBy = Automatic
 

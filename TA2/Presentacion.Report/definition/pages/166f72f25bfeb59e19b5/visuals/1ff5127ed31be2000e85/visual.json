@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "c2ad39302e06e9403897",
+  "name": "1ff5127ed31be2000e85",
   "position": {
-    "x": 43.092269326683294,
+    "x": 492.86783042394012,
     "y": 89.775561097256855,
-    "z": 1000,
+    "z": 2000,
     "height": 95.16209476309227,
-    "width": 255.86034912718205,
-    "tabOrder": 1000
+    "width": 293.56608478802991,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "card",
@@ -25,14 +25,14 @@
                           "Entity": "DisneyMovies"
                         }
                       },
-                      "Property": "show_id"
+                      "Property": "duration_time"
                     }
                   },
-                  "Function": 5
+                  "Function": 1
                 }
               },
-              "queryRef": "Min(DisneyMovies.show_id)",
-              "nativeQueryRef": "Count of show_id"
+              "queryRef": "Sum(DisneyMovies.duration_time)",
+              "nativeQueryRef": "Average of duration_time"
             }
           ]
         }
@@ -49,10 +49,10 @@
                         "Entity": "DisneyMovies"
                       }
                     },
-                    "Property": "show_id"
+                    "Property": "duration_time"
                   }
                 },
-                "Function": 5
+                "Function": 1
               }
             },
             "direction": "Descending"
@@ -101,6 +101,13 @@
                   }
                 }
               }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
             }
           }
         }
@@ -133,7 +140,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Producciones Totales'"
+                  "Value": "'Duracion promedio en minutos'"
                 }
               }
             },
@@ -146,6 +153,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
@@ -167,5 +181,108 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ae5f0ac256a0d2a24c3a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DisneyMovies"
+              }
+            },
+            "Property": "type"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DisneyMovies",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "type"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Movie'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "e8da4840aa210c520b9e",
+        "field": {
+          "Arithmetic": {
+            "Left": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DisneyMovies"
+                      }
+                    },
+                    "Property": "duration_time"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "Right": {
+              "ScopedEval": {
+                "Expression": {
+                  "Aggregation": {
+                    "Expression": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DisneyMovies"
+                          }
+                        },
+                        "Property": "duration_time"
+                      }
+                    },
+                    "Function": 1
+                  }
+                },
+                "Scope": []
+              }
+            },
+            "Operator": 3
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ]
   }
 }
