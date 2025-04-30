@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "DisneyMovies.release_year",
-              "nativeQueryRef": "release_year",
-              "active": true
+              "nativeQueryRef": "Año de salida",
+              "active": true,
+              "displayName": "Año de salida"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "DisneyMovies.duration_time",
-              "nativeQueryRef": "duration_time"
+              "nativeQueryRef": "Duracion",
+              "displayName": "Duracion"
             }
           ]
         }
