@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "4aab5d2ac3249d80224c",
+  "name": "31ed8b7b6b92c164014d",
   "position": {
     "x": 18.584392014519057,
-    "y": 173.06715063520872,
-    "z": 5000,
-    "height": 114.99092558983666,
+    "y": 22.068965517241377,
+    "z": 7000,
+    "height": 118.47549909255898,
     "width": 265.989110707804,
-    "tabOrder": 5000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "DisneyMovies"
                     }
                   },
-                  "Property": "duration_time"
+                  "Property": "release_year"
                 }
               },
-              "queryRef": "DisneyMovies.duration_time",
-              "nativeQueryRef": "duration_time",
+              "queryRef": "DisneyMovies.release_year",
+              "nativeQueryRef": "release_year",
               "active": true
             }
           ]
