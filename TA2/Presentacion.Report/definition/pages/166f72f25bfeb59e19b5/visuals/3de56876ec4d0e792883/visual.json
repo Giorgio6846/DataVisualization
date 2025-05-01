@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "3de56876ec4d0e792883",
   "position": {
-    "x": 551.01335428122547,
-    "y": 269.4736842105263,
+    "x": 74,
+    "y": 5,
     "z": 9000,
-    "height": 127.69835035349568,
-    "width": 178.97879025923018,
+    "height": 159,
+    "width": 249,
     "tabOrder": 9000
   },
   "visual": {
@@ -21,7 +21,8 @@
                   {
                     "value": "Integrantes:",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
                     }
                   }
                 ]
@@ -38,7 +39,8 @@
                   {
                     "value": "Mathias Hualtibamba",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
                     }
                   }
                 ]
@@ -48,7 +50,8 @@
                   {
                     "value": "Fabio Osorio",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
                     }
                   }
                 ]
@@ -58,7 +61,8 @@
                   {
                     "value": "Giorgio Mancusi",
                     "textStyle": {
-                      "fontSize": "11pt"
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
                     }
                   }
                 ]
