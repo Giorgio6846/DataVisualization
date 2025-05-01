@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "65a7262b28005538b2e9",
   "position": {
-    "x": 712.95801693287933,
-    "y": 450.36772278956113,
+    "x": 744.06912804399064,
+    "y": 473.58994501178319,
     "z": 6000,
     "height": 246.34721131186174,
     "width": 496.71641791044777,
@@ -182,13 +182,6 @@
                   }
                 }
               }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Clasificación'"
-                }
-              }
             }
           }
         }
@@ -281,7 +274,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Clasificación de producciones'"
+                  "Value": "'Rating de producciones'"
                 }
               }
             },

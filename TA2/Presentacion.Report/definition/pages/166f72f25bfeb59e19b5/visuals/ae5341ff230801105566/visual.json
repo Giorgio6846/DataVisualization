@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "ae5341ff230801105566",
   "position": {
-    "x": 1061,
-    "y": 24,
+    "x": 1032.6472898664572,
+    "y": 90.494893951296149,
     "z": 3000,
-    "height": 117,
-    "width": 149,
+    "height": 94.516889238020426,
+    "width": 207.13275726630008,
     "tabOrder": 3000
   },
   "visual": {
@@ -120,7 +120,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Rating común'"
+                  "Value": "'Rating comun'"
                 }
               }
             },
@@ -133,13 +133,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
                 }
               }
             }

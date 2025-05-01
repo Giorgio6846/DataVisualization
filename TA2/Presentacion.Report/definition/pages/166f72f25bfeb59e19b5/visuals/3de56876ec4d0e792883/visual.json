@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "3de56876ec4d0e792883",
   "position": {
-    "x": 23.343465045592705,
-    "y": 4.86322188449848,
+    "x": 551.01335428122547,
+    "y": 269.4736842105263,
     "z": 9000,
-    "height": 159.51367781155017,
-    "width": 382.24924012158056,
+    "height": 127.69835035349568,
+    "width": 178.97879025923018,
     "tabOrder": 9000
   },
   "visual": {
@@ -21,8 +21,7 @@
                   {
                     "value": "Integrantes:",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "16pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -37,10 +36,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Mathias Hualtibamba u202214421",
+                    "value": "Mathias Hualtibamba",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "16pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -48,20 +46,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Fabio Osorio ",
+                    "value": "Fabio Osorio",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "16pt"
-                    }
-                  },
-                  {
-                    "value": "\t\t\t\t\t\t"
-                  },
-                  {
-                    "value": "u202211499",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "16pt"
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -69,20 +56,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Giorgio Mancusi ",
+                    "value": "Giorgio ",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "16pt"
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": "\t\t\t\t"
-                  },
-                  {
-                    "value": "u202216613",
+                    "value": "Mancusi",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "16pt"
+                      "fontSize": "14.6667px"
                     }
                   }
                 ]
