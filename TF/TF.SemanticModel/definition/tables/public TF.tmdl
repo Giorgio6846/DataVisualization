@@ -1,0 +1,78 @@
+table 'public TF'
+	lineageTag: deef8595-5347-418c-9ca6-d48ff1ebbf82
+
+	column name
+		dataType: string
+		lineageTag: 43bc2b49-e28c-45d0-ab0f-bd6acb4c3aee
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column author
+		dataType: string
+		lineageTag: 06abe5cf-71ef-4da0-bd20-5f2b02d2ab6d
+		summarizeBy: none
+		sourceColumn: author
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_rating
+		dataType: double
+		lineageTag: 3a19998a-f5a6-4d81-a0de-07ace884fa2b
+		summarizeBy: sum
+		sourceColumn: user_rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column reviews
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cea2353-886a-4edc-8e58-e4c2ef9a60de
+		summarizeBy: sum
+		sourceColumn: reviews
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: int64
+		formatString: 0
+		lineageTag: e5b70a88-891f-4969-8c64-e72ea582cd95
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: c4999489-fd91-4beb-b748-bdccbcbd4dd0
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column genre
+		dataType: string
+		lineageTag: d4846ff7-62df-483c-91ad-99bd4cb843d3
+		summarizeBy: none
+		sourceColumn: genre
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public TF' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("10.147.19.99:5432", "PowerBI"),
+				    public_TF = Source{[Schema="public",Item="TF"]}[Data],
+				    #"Rounded Off" = Table.TransformColumns(public_TF,{{"user_rating", each Number.Round(_, 2), type number}})
+				in
+				    #"Rounded Off"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

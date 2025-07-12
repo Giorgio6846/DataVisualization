@@ -6,7 +6,6 @@ table LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9
 	column Date
 		dataType: dateTime
 		isHidden
-		formatString: General Date
 		lineageTag: 697ec1fd-bcab-44a1-912c-b58342284d9a
 		dataCategory: PaddedDateTableDates
 		summarizeBy: none
@@ -18,7 +17,6 @@ table LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9
 	column Year = YEAR([Date])
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: e8ef7342-8b53-40fd-93e9-f47ac5ee9d2d
 		dataCategory: Years
 		summarizeBy: none
@@ -30,7 +28,6 @@ table LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9
 	column MonthNo = MONTH([Date])
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: e057f8ef-f054-46b1-a7d2-5bda19fde30c
 		dataCategory: MonthOfYear
 		summarizeBy: none
@@ -54,7 +51,6 @@ table LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9
 	column QuarterNo = INT(([MonthNo] + 2) / 3)
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: ab0e82b1-564f-4075-b75c-82ed25d6c4cb
 		dataCategory: QuarterOfYear
 		summarizeBy: none
@@ -78,7 +74,6 @@ table LocalDateTable_d80d3102-cc7b-48a4-b336-3f8e69c555b9
 	column Day = DAY([Date])
 		dataType: int64
 		isHidden
-		formatString: 0
 		lineageTag: 05538b6b-de3f-4bc7-9576-7cb343e93aee
 		dataCategory: DayOfMonth
 		summarizeBy: none
